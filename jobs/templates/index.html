@@ -1,7 +1,15 @@
 {% extends "layout.html"%}
 {% block content %}
 
-<h1>Jobs</h1>
+<!-- templates/index.html -->
+  <div class="columns">
+    <div class="column">
+      <h1>Jobs</h1>
+    </div>
+    <div class="column is-one-fifth">
+    </div>
+  </div>
+{{show_jobs(jobs)}}
 {% endblock %}
 
 <!--<!DOCTYPE html>-->
