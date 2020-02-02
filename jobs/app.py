@@ -48,6 +48,7 @@ def job(job_id):
     job = execute_sql('SELECT job.id, job.title, job.description, job.salary, employer.id as employer_id, employer.name as employer_name FROM job JOIN employer ON employer.id = job.employer_id WHERE job.id = ?', [job_id], single=True)
     return render_template("job.html", job=job)
 
+
 @app.route('/employer/<employer_id>')
 def employer(employer_id):
     employer = execute_sql('SELECT * FROM employer WHERE id=?', [employer_id], single=True)
